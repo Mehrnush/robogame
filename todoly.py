@@ -2,10 +2,10 @@ import requests
 import time
 import sys
 
-sys.path.append('../../robotcontroller')
+sys.path.append('./')
 import robot
 
-robot_one = "192.168.43.159" # "192.168.0.102"
+robot_one = "192.168.0.105"  #"192.168.43.159" # "192.168.0.102"
 height_mountain = 46
 
 
@@ -50,20 +50,24 @@ def main():
 def test():
     controller = robot.Controller(robot_one)
     robot1 = robot.Robot(controller)
-    #robot1.forward(1)
-    while True:
-        robot1.forward(1)
-        robot1.forward(1)
-        robot1.forward(1)
-        robot1.forward(1)
-        robot1.forward(1)
-    #while True:
-        #robot1.backward(1)
-        #robot1.backward(1)
-        #robot1.backward(1)
-        #robot1.backward(1)
-        #robot1.backward(1)
-
+    # for x in range(0, 4):
+    #     robot1.forward(1)
+    #     robot1.forward(1)
+    #     robot1.forward(1)
+    #     robot1.forward(1)
+    #     robot1.forward(1)
+    for x in range(0, 4):
+        robot1.right(1)
+        robot1.right(1)
+        robot1.right(1)
+        robot1.right(1)
+        robot1.right(1)
+    # for x in range(0, 4):
+    #     robot1.backward(1)
+    #     robot1.backward(1)
+    #     robot1.backward(1)
+    #     robot1.backward(1)
+    #     robot1.backward(1)
 
 
 def test2():
@@ -71,8 +75,8 @@ def test2():
 
 
 if __name__ == "__main__":
-    main()
-    #test()
+    #main()
+    test()
     # test2()
 
 

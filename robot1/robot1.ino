@@ -45,11 +45,11 @@ int backward(String s) {
   // delay(20);
   for (int i = 0; i < length; i++) {
     servo1.attach(9);
-    servo1.write(1);
+    servo1.write(180);
     delay(260);
     servo1.detach();
     servo2.attach(10);
-    servo2.write(1);
+    servo2.write(180);
     delay(190);
     servo2.detach();
   }
@@ -58,7 +58,7 @@ int backward(String s) {
   return 0;
 }
 
-int right(String s) {
+int left(String s) {
   int length = s.toInt();
   Serial.println(length);
   start();
@@ -79,7 +79,7 @@ int right(String s) {
   return 0;
 }
 
-int left(String s) {
+int right(String s) {
   int length = s.toInt();
   start();
   delay(20);
